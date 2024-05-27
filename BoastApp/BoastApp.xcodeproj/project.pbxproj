@@ -14,6 +14,7 @@
 		B0E31EB12C042929007A859E /* BoastAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E31EB02C042929007A859E /* BoastAppTests.swift */; };
 		B0E31EBB2C04292A007A859E /* BoastAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E31EBA2C04292A007A859E /* BoastAppUITests.swift */; };
 		B0E31EBD2C04292A007A859E /* BoastAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E31EBC2C04292A007A859E /* BoastAppUITestsLaunchTests.swift */; };
+		B0E31ECA2C043432007A859E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E31EC92C043432007A859E /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		B0E31EB62C04292A007A859E /* BoastAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoastAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E31EBA2C04292A007A859E /* BoastAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoastAppUITests.swift; sourceTree = "<group>"; };
 		B0E31EBC2C04292A007A859E /* BoastAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoastAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0E31EC92C043432007A859E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		B0E31ECB2C043E3B007A859E /* BoastApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoastApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,12 @@
 		B0E31E9E2C042929007A859E /* BoastApp */ = {
 			isa = PBXGroup;
 			children = (
+				B0E31ECB2C043E3B007A859E /* BoastApp.entitlements */,
 				B0E31E9F2C042929007A859E /* BoastAppApp.swift */,
 				B0E31EA12C042929007A859E /* ContentView.swift */,
 				B0E31EA32C042929007A859E /* Assets.xcassets */,
 				B0E31EA52C042929007A859E /* Preview Content */,
+				B0E31EC92C043432007A859E /* HealthKitManager.swift */,
 			);
 			path = BoastApp;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			files = (
 				B0E31EA22C042929007A859E /* ContentView.swift in Sources */,
 				B0E31EA02C042929007A859E /* BoastAppApp.swift in Sources */,
+				B0E31ECA2C043432007A859E /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +425,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BoastApp/BoastApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BoastApp/Preview Content\"";
 				DEVELOPMENT_TEAM = FHZKMM7ZW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We use your health data to track your activity and provide insights for your well-being";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We use your health data to write activity and exercise information to help you track your progress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +457,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BoastApp/BoastApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BoastApp/Preview Content\"";
 				DEVELOPMENT_TEAM = FHZKMM7ZW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We use your health data to track your activity and provide insights for your well-being";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We use your health data to write activity and exercise information to help you track your progress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
